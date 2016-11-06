@@ -1,0 +1,778 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{525312db-8c19-4b96-8a5a-34e623389f6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\SceneManager">
+      <UniqueIdentifier>{33d26bfd-d314-441b-9e6f-931789c6f933}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Sprite">
+      <UniqueIdentifier>{c042f312-6f9d-4056-9a2e-5a016b465906}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\SpriteManager">
+      <UniqueIdentifier>{687f706d-061b-4a3d-b1a3-47e4f4a9e7e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\TextureManager">
+      <UniqueIdentifier>{1ffd3d12-9eea-4e6a-b9da-25433c5d9687}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\ISceneNode">
+      <UniqueIdentifier>{e103664b-02d2-42b6-b212-9ce8543eb647}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\InputManager">
+      <UniqueIdentifier>{706acb94-2229-46af-9e41-a991006959cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Function">
+      <UniqueIdentifier>{eadf6951-8b5b-43c8-93cc-90c18fe1564f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Console">
+      <UniqueIdentifier>{a7b0c703-bc6f-471f-b018-ffe5d13783f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Application">
+      <UniqueIdentifier>{8cd4bddb-1693-4516-864a-9a36cd89d16d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Animation">
+      <UniqueIdentifier>{e379b1fd-8bdc-4f34-be99-baa6256363ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\GUIButton">
+      <UniqueIdentifier>{c9685d4f-e44f-4dd5-9706-7a6f0fd61207}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Font">
+      <UniqueIdentifier>{46ed36a0-cb14-4632-956a-f8c3e762da19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Cusor">
+      <UniqueIdentifier>{f6cd78ed-7216-42ac-90b9-05f5d5b1e68a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\EditText">
+      <UniqueIdentifier>{bc833bb4-9c87-4a81-87bb-f05a049084dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Sound">
+      <UniqueIdentifier>{34d5b257-f38f-45c1-9b6e-9b58966f1535}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{5176a937-0ee7-4b82-9666-31abfd9363ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Drag">
+      <UniqueIdentifier>{5e6f515d-65e0-4405-ad40-89601b6f53fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Wheel">
+      <UniqueIdentifier>{1a4b2f2f-edfa-4086-87f1-482695f50b6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\EditText\Edit">
+      <UniqueIdentifier>{c86e7552-adfa-4209-a102-b91b5ee30992}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\EditText\InputCon">
+      <UniqueIdentifier>{a4583c70-fccb-4748-a407-2f52bbb23919}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Liner">
+      <UniqueIdentifier>{80b10cea-823a-4678-8346-ac0005bcdf79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{78e73618-adba-46a4-8256-4c608134ea87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Physical">
+      <UniqueIdentifier>{495cd52d-8f04-4655-ad9b-e89556795a18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Character">
+      <UniqueIdentifier>{f0d00f55-ec97-4ad3-90fe-f361e35dc856}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Light">
+      <UniqueIdentifier>{b176112c-e9ce-4535-810e-4452d6f6a9fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\CrashManager">
+      <UniqueIdentifier>{3a4c4e8f-245f-40ff-b076-d75b2f4591da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\StartScene">
+      <UniqueIdentifier>{785e4710-dec4-4d3e-861d-155dc109386d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\PrintFont">
+      <UniqueIdentifier>{9e2cec19-bd46-4cb6-9e1c-f9fcd0bce9e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\MainScene">
+      <UniqueIdentifier>{04c1260e-bd21-4dee-b8a2-082de8115294}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\SpawnManager">
+      <UniqueIdentifier>{4ea63031-8f68-499d-a382-37fc8f8e649c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Object">
+      <UniqueIdentifier>{5a16ee5a-5f19-4e84-8f53-cda3d521c707}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Object\Npc">
+      <UniqueIdentifier>{04a2d50b-4c44-4aa5-a779-57178604dd1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Object\Philla">
+      <UniqueIdentifier>{0f84bba6-0d94-42f4-9b44-d93fe8702c2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Object\Stick">
+      <UniqueIdentifier>{e9df8973-20a1-4fb0-92dd-71de97ab57d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Object\Touch">
+      <UniqueIdentifier>{b6167cde-65eb-4ea2-a2ba-48b3486b154e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Object\Fan">
+      <UniqueIdentifier>{46c99685-e318-450d-a62c-56ccd9ae8139}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Wind">
+      <UniqueIdentifier>{ee01540b-de4c-4e1b-9ec9-d28f786ccf11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Fire">
+      <UniqueIdentifier>{6d2d8a96-14bb-4803-88da-12eea14b5abb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\DataFile">
+      <UniqueIdentifier>{72f36002-ebe1-49f6-9d99-113fc0f144be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Moon">
+      <UniqueIdentifier>{109d2b84-cc0b-40a5-ac20-53db6d1aff79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Timer">
+      <UniqueIdentifier>{a1418a2a-9edb-4f8e-b16d-d6388f4ea41d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Gagebar">
+      <UniqueIdentifier>{caef3d14-0818-4a6c-92d6-33ec98540464}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\ShakeScene">
+      <UniqueIdentifier>{b4fa2f5e-979e-408f-affa-c1ec741b1a4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\NextStatgeManager">
+      <UniqueIdentifier>{f5ee2629-c4c8-4c50-aace-70d5e41fe4a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\PopUPScene">
+      <UniqueIdentifier>{7a129950-dbc9-4d03-800f-fade901d4da1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\CurtainCall">
+      <UniqueIdentifier>{be99a83b-fa90-442e-9fb6-33bf8be922b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\CenterText">
+      <UniqueIdentifier>{d72b1b80-4664-465c-b966-18a6d95d1093}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\DataFile\1.First">
+      <UniqueIdentifier>{97bfe75e-ff98-4efb-9b67-7bac6592f5dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\DataFile\4.four">
+      <UniqueIdentifier>{758cd95e-a9e3-4142-a522-7c5047d9617d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\DataFile\5.five">
+      <UniqueIdentifier>{e796e4c5-9eea-4efa-bc90-e81faffe3139}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\DataFile\8.eight">
+      <UniqueIdentifier>{99039571-734b-4270-a8d8-dd19f01e04c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\DataFile\9.nine">
+      <UniqueIdentifier>{6409822c-2a0e-49c6-b0a3-050cb39216bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\DataFile\6.six">
+      <UniqueIdentifier>{3b08be22-c41d-4786-802c-2f28e0019aa4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\DataFile\3.Third">
+      <UniqueIdentifier>{5fcd820f-256f-4ad7-8801-8ad32c59280b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\DataFile\2.second">
+      <UniqueIdentifier>{1b2371e6-3216-458e-90e8-a527ebbfa6d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\DataFile\7.seven">
+      <UniqueIdentifier>{506ee7e0-ed52-45d9-801c-fe02f5b79ca0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\CreditScene">
+      <UniqueIdentifier>{c8eb67ff-61d8-4bd0-a79c-a6a6a841a70d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Direction">
+      <UniqueIdentifier>{42554c2d-1c9e-4c68-b2fa-e0425cdf97b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Direction\DirectionA">
+      <UniqueIdentifier>{35227d4f-864b-436b-998a-36580ee1e41a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Direction\DirectionB">
+      <UniqueIdentifier>{3e2831aa-0cdc-4965-bc63-7ef2c583403b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Direction\DirectionC">
+      <UniqueIdentifier>{6f818884-d7be-4c36-95dd-b382ebf0a95f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Direction\DirectionD">
+      <UniqueIdentifier>{3a53f574-c74a-4d41-9605-262f8e28e3b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Direction\DirectionE">
+      <UniqueIdentifier>{34f12725-78c9-4bac-8d2b-f3376c3339e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Direction\DirectionG">
+      <UniqueIdentifier>{e6794fca-47a5-4fe9-bdcb-1035cdc497b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Direction\DirectionH">
+      <UniqueIdentifier>{a74c0899-17de-4286-b8b3-8cd84c3b4340}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Direction\DirectionI">
+      <UniqueIdentifier>{5a5eaab2-5c21-49e5-aef3-dbf00673310c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Application.cpp">
+      <Filter>Engine\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="ISceneNode.cpp">
+      <Filter>Engine\ISceneNode</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>Engine\SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureManager.cpp">
+      <Filter>Engine\TextureManager</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteManager.cpp">
+      <Filter>Engine\SpriteManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite.cpp">
+      <Filter>Engine\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation.cpp">
+      <Filter>Engine\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>Engine\InputManager</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Engine\Console</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIButton.cpp">
+      <Filter>Engine\GUIButton</Filter>
+    </ClCompile>
+    <ClCompile Include="Font.cpp">
+      <Filter>Engine\Font</Filter>
+    </ClCompile>
+    <ClCompile Include="MouseCusor.cpp">
+      <Filter>Engine\Cusor</Filter>
+    </ClCompile>
+    <ClCompile Include="CSound.cpp">
+      <Filter>Engine\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Drag.cpp">
+      <Filter>Engine\Drag</Filter>
+    </ClCompile>
+    <ClCompile Include="Wheel.cpp">
+      <Filter>Engine\Wheel</Filter>
+    </ClCompile>
+    <ClCompile Include="TextBox.cpp">
+      <Filter>Engine\EditText\Edit</Filter>
+    </ClCompile>
+    <ClCompile Include="Automata.cpp">
+      <Filter>Engine\EditText\InputCon</Filter>
+    </ClCompile>
+    <ClCompile Include="CodeTable.cpp">
+      <Filter>Engine\EditText\InputCon</Filter>
+    </ClCompile>
+    <ClCompile Include="Liner.cpp">
+      <Filter>Engine\Liner</Filter>
+    </ClCompile>
+    <ClCompile Include="Physical.cpp">
+      <Filter>Game\Physical</Filter>
+    </ClCompile>
+    <ClCompile Include="Character.cpp">
+      <Filter>Game\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Touch.cpp">
+      <Filter>Game\Object\Touch</Filter>
+    </ClCompile>
+    <ClCompile Include="CrashManager.cpp">
+      <Filter>Game\CrashManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Function.cpp">
+      <Filter>Engine\Function</Filter>
+    </ClCompile>
+    <ClCompile Include="PrintFont.cpp">
+      <Filter>Game\PrintFont</Filter>
+    </ClCompile>
+    <ClCompile Include="StartScene.cpp">
+      <Filter>Scene\StartScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Light.cpp">
+      <Filter>Game\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="MainScene.cpp">
+      <Filter>Scene\MainScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Philla.cpp">
+      <Filter>Game\Object\Philla</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnManager.cpp">
+      <Filter>Game\SpawnManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Npc.cpp">
+      <Filter>Game\Object\Npc</Filter>
+    </ClCompile>
+    <ClCompile Include="Stick.cpp">
+      <Filter>Game\Object\Stick</Filter>
+    </ClCompile>
+    <ClCompile Include="Fan.cpp">
+      <Filter>Game\Object\Fan</Filter>
+    </ClCompile>
+    <ClCompile Include="Wind.cpp">
+      <Filter>Game\Wind</Filter>
+    </ClCompile>
+    <ClCompile Include="Fire.cpp">
+      <Filter>Game\Fire</Filter>
+    </ClCompile>
+    <ClCompile Include="Moon.cpp">
+      <Filter>Game\Moon</Filter>
+    </ClCompile>
+    <ClCompile Include="Gagebar.cpp">
+      <Filter>Game\Gagebar</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>Engine\Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="ShakeScene.cpp">
+      <Filter>Game\ShakeScene</Filter>
+    </ClCompile>
+    <ClCompile Include="NextStageManager.cpp">
+      <Filter>Game\NextStatgeManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CurtainCall.cpp">
+      <Filter>Game\CurtainCall</Filter>
+    </ClCompile>
+    <ClCompile Include="CenterText.cpp">
+      <Filter>Game\CenterText</Filter>
+    </ClCompile>
+    <ClCompile Include="Credit.cpp">
+      <Filter>Scene\CreditScene</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectionA.cpp">
+      <Filter>Scene\Direction\DirectionA</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectionC.cpp">
+      <Filter>Scene\Direction\DirectionC</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectionE.cpp">
+      <Filter>Scene\Direction\DirectionE</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectionH.cpp">
+      <Filter>Scene\Direction\DirectionH</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectionD.cpp">
+      <Filter>Scene\Direction\DirectionD</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectionB.cpp">
+      <Filter>Scene\Direction\DirectionB</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectionI.cpp">
+      <Filter>Scene\Direction\DirectionI</Filter>
+    </ClCompile>
+    <ClCompile Include="PopUp.cpp">
+      <Filter>Scene\PopUPScene</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageF.cpp">
+      <Filter>Scene\Direction\DirectionG</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageT.cpp">
+      <Filter>Scene\Direction\DirectionG</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application.h">
+      <Filter>Engine\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Function.h">
+      <Filter>Engine\Function</Filter>
+    </ClInclude>
+    <ClInclude Include="Console.h">
+      <Filter>Engine\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="ISceneNode.h">
+      <Filter>Engine\ISceneNode</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>Engine\SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureManager.h">
+      <Filter>Engine\TextureManager</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteManager.h">
+      <Filter>Engine\SpriteManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite.h">
+      <Filter>Engine\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>Engine\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>Engine\InputManager</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIButton.h">
+      <Filter>Engine\GUIButton</Filter>
+    </ClInclude>
+    <ClInclude Include="Font.h">
+      <Filter>Engine\Font</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseCusor.h">
+      <Filter>Engine\Cusor</Filter>
+    </ClInclude>
+    <ClInclude Include="CSound.h">
+      <Filter>Engine\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Drag.h">
+      <Filter>Engine\Drag</Filter>
+    </ClInclude>
+    <ClInclude Include="Wheel.h">
+      <Filter>Engine\Wheel</Filter>
+    </ClInclude>
+    <ClInclude Include="TextBox.h">
+      <Filter>Engine\EditText\Edit</Filter>
+    </ClInclude>
+    <ClInclude Include="Automata.h">
+      <Filter>Engine\EditText\InputCon</Filter>
+    </ClInclude>
+    <ClInclude Include="CodeTable.h">
+      <Filter>Engine\EditText\InputCon</Filter>
+    </ClInclude>
+    <ClInclude Include="Liner.h">
+      <Filter>Engine\Liner</Filter>
+    </ClInclude>
+    <ClInclude Include="Physical.h">
+      <Filter>Game\Physical</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>Game\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Touch.h">
+      <Filter>Game\Object\Touch</Filter>
+    </ClInclude>
+    <ClInclude Include="CrashManager.h">
+      <Filter>Game\CrashManager</Filter>
+    </ClInclude>
+    <ClInclude Include="PrintFont.h">
+      <Filter>Game\PrintFont</Filter>
+    </ClInclude>
+    <ClInclude Include="StartScene.h">
+      <Filter>Scene\StartScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Light.h">
+      <Filter>Game\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="MainScene.h">
+      <Filter>Scene\MainScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Philla.h">
+      <Filter>Game\Object\Philla</Filter>
+    </ClInclude>
+    <ClInclude Include="SpawnManager.h">
+      <Filter>Game\SpawnManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Npc.h">
+      <Filter>Game\Object\Npc</Filter>
+    </ClInclude>
+    <ClInclude Include="Stick.h">
+      <Filter>Game\Object\Stick</Filter>
+    </ClInclude>
+    <ClInclude Include="Fan.h">
+      <Filter>Game\Object\Fan</Filter>
+    </ClInclude>
+    <ClInclude Include="Wind.h">
+      <Filter>Game\Wind</Filter>
+    </ClInclude>
+    <ClInclude Include="Fire.h">
+      <Filter>Game\Fire</Filter>
+    </ClInclude>
+    <ClInclude Include="Moon.h">
+      <Filter>Game\Moon</Filter>
+    </ClInclude>
+    <ClInclude Include="Gagebar.h">
+      <Filter>Game\Gagebar</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>Engine\Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="ShakeScene.h">
+      <Filter>Game\ShakeScene</Filter>
+    </ClInclude>
+    <ClInclude Include="NextStageManager.h">
+      <Filter>Game\NextStatgeManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CurtainCall.h">
+      <Filter>Game\CurtainCall</Filter>
+    </ClInclude>
+    <ClInclude Include="CenterText.h">
+      <Filter>Game\CenterText</Filter>
+    </ClInclude>
+    <ClInclude Include="Credit.h">
+      <Filter>Scene\CreditScene</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectionA.h">
+      <Filter>Scene\Direction\DirectionA</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectionC.h">
+      <Filter>Scene\Direction\DirectionC</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectionE.h">
+      <Filter>Scene\Direction\DirectionE</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectionH.h">
+      <Filter>Scene\Direction\DirectionH</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectionD.h">
+      <Filter>Scene\Direction\DirectionD</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectionB.h">
+      <Filter>Scene\Direction\DirectionB</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectionI.h">
+      <Filter>Scene\Direction\DirectionI</Filter>
+    </ClInclude>
+    <ClInclude Include="PopUp.h">
+      <Filter>Scene\PopUPScene</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageF.h">
+      <Filter>Scene\Direction\DirectionG</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageT.h">
+      <Filter>Scene\Direction\DirectionG</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resource\mapdata\mapFan\first.mdatF">
+      <Filter>Game\DataFile\1.First</Filter>
+    </None>
+    <None Include="resource\mapdata\mapFire\first.mdatFi">
+      <Filter>Game\DataFile\1.First</Filter>
+    </None>
+    <None Include="resource\mapdata\mapLine\first.mdatL">
+      <Filter>Game\DataFile\1.First</Filter>
+    </None>
+    <None Include="resource\mapdata\mapNpc\first.mdatN">
+      <Filter>Game\DataFile\1.First</Filter>
+    </None>
+    <None Include="resource\mapdata\mapPhilla\first.mdatP">
+      <Filter>Game\DataFile\1.First</Filter>
+    </None>
+    <None Include="resource\mapdata\mapStick\first.mdatS">
+      <Filter>Game\DataFile\1.First</Filter>
+    </None>
+    <None Include="resource\mapdata\mapTouch\first.mdatT">
+      <Filter>Game\DataFile\1.First</Filter>
+    </None>
+    <None Include="resource\mapdata\mapWind\first.mdatW">
+      <Filter>Game\DataFile\1.First</Filter>
+    </None>
+    <None Include="resource\mapdata\mapChar\first.mdatC">
+      <Filter>Game\DataFile\1.First</Filter>
+    </None>
+    <None Include="resource\mapdata\mapLine\eight.mdatL">
+      <Filter>Game\DataFile\8.eight</Filter>
+    </None>
+    <None Include="resource\mapdata\mapLine\five.mdatL">
+      <Filter>Game\DataFile\5.five</Filter>
+    </None>
+    <None Include="resource\mapdata\mapLine\fourth.mdatL">
+      <Filter>Game\DataFile\4.four</Filter>
+    </None>
+    <None Include="resource\mapdata\mapLine\nine.mdatL">
+      <Filter>Game\DataFile\9.nine</Filter>
+    </None>
+    <None Include="resource\mapdata\mapLine\second.mdatL">
+      <Filter>Game\DataFile\2.second</Filter>
+    </None>
+    <None Include="resource\mapdata\mapLine\seven.mdatL">
+      <Filter>Game\DataFile\7.seven</Filter>
+    </None>
+    <None Include="resource\mapdata\mapLine\six.mdatL">
+      <Filter>Game\DataFile\6.six</Filter>
+    </None>
+    <None Include="resource\mapdata\mapLine\third.mdatL">
+      <Filter>Game\DataFile\3.Third</Filter>
+    </None>
+    <None Include="resource\mapdata\mapChar\eight.mdatC">
+      <Filter>Game\DataFile\8.eight</Filter>
+    </None>
+    <None Include="resource\mapdata\mapChar\five.mdatC">
+      <Filter>Game\DataFile\5.five</Filter>
+    </None>
+    <None Include="resource\mapdata\mapChar\fourth.mdatC">
+      <Filter>Game\DataFile\4.four</Filter>
+    </None>
+    <None Include="resource\mapdata\mapChar\nine.mdatC">
+      <Filter>Game\DataFile\9.nine</Filter>
+    </None>
+    <None Include="resource\mapdata\mapChar\second.mdatC">
+      <Filter>Game\DataFile\2.second</Filter>
+    </None>
+    <None Include="resource\mapdata\mapChar\seven.mdatC">
+      <Filter>Game\DataFile\7.seven</Filter>
+    </None>
+    <None Include="resource\mapdata\mapChar\six.mdatC">
+      <Filter>Game\DataFile\6.six</Filter>
+    </None>
+    <None Include="resource\mapdata\mapChar\third.mdatC">
+      <Filter>Game\DataFile\3.Third</Filter>
+    </None>
+    <None Include="resource\mapdata\mapFan\eight.mdatF">
+      <Filter>Game\DataFile\8.eight</Filter>
+    </None>
+    <None Include="resource\mapdata\mapFan\five.mdatF">
+      <Filter>Game\DataFile\5.five</Filter>
+    </None>
+    <None Include="resource\mapdata\mapFan\fourth.mdatF">
+      <Filter>Game\DataFile\4.four</Filter>
+    </None>
+    <None Include="resource\mapdata\mapFan\nine.mdatF">
+      <Filter>Game\DataFile\9.nine</Filter>
+    </None>
+    <None Include="resource\mapdata\mapFan\second.mdatF">
+      <Filter>Game\DataFile\2.second</Filter>
+    </None>
+    <None Include="resource\mapdata\mapFan\seven.mdatF">
+      <Filter>Game\DataFile\7.seven</Filter>
+    </None>
+    <None Include="resource\mapdata\mapFan\six.mdatF">
+      <Filter>Game\DataFile\6.six</Filter>
+    </None>
+    <None Include="resource\mapdata\mapFan\third.mdatF">
+      <Filter>Game\DataFile\3.Third</Filter>
+    </None>
+    <None Include="resource\mapdata\mapFire\eight.mdatFi">
+      <Filter>Game\DataFile\8.eight</Filter>
+    </None>
+    <None Include="resource\mapdata\mapFire\five.mdatFi">
+      <Filter>Game\DataFile\5.five</Filter>
+    </None>
+    <None Include="resource\mapdata\mapFire\fourth.mdatFi">
+      <Filter>Game\DataFile\4.four</Filter>
+    </None>
+    <None Include="resource\mapdata\mapFire\nine.mdatFi">
+      <Filter>Game\DataFile\9.nine</Filter>
+    </None>
+    <None Include="resource\mapdata\mapFire\second.mdatFi">
+      <Filter>Game\DataFile\2.second</Filter>
+    </None>
+    <None Include="resource\mapdata\mapFire\seven.mdatFi">
+      <Filter>Game\DataFile\7.seven</Filter>
+    </None>
+    <None Include="resource\mapdata\mapFire\six.mdatFi">
+      <Filter>Game\DataFile\6.six</Filter>
+    </None>
+    <None Include="resource\mapdata\mapFire\third.mdatFi">
+      <Filter>Game\DataFile\3.Third</Filter>
+    </None>
+    <None Include="resource\mapdata\mapPhilla\eight.mdatP">
+      <Filter>Game\DataFile\8.eight</Filter>
+    </None>
+    <None Include="resource\mapdata\mapPhilla\five.mdatP">
+      <Filter>Game\DataFile\5.five</Filter>
+    </None>
+    <None Include="resource\mapdata\mapPhilla\fourth.mdatP">
+      <Filter>Game\DataFile\4.four</Filter>
+    </None>
+    <None Include="resource\mapdata\mapPhilla\nine.mdatP">
+      <Filter>Game\DataFile\9.nine</Filter>
+    </None>
+    <None Include="resource\mapdata\mapPhilla\second.mdatP">
+      <Filter>Game\DataFile\2.second</Filter>
+    </None>
+    <None Include="resource\mapdata\mapPhilla\seven.mdatP">
+      <Filter>Game\DataFile\7.seven</Filter>
+    </None>
+    <None Include="resource\mapdata\mapPhilla\six.mdatP">
+      <Filter>Game\DataFile\6.six</Filter>
+    </None>
+    <None Include="resource\mapdata\mapPhilla\third.mdatP">
+      <Filter>Game\DataFile\3.Third</Filter>
+    </None>
+    <None Include="resource\mapdata\mapStick\eight.mdatS">
+      <Filter>Game\DataFile\8.eight</Filter>
+    </None>
+    <None Include="resource\mapdata\mapStick\five.mdatS">
+      <Filter>Game\DataFile\5.five</Filter>
+    </None>
+    <None Include="resource\mapdata\mapStick\fourth.mdatS">
+      <Filter>Game\DataFile\4.four</Filter>
+    </None>
+    <None Include="resource\mapdata\mapStick\nine.mdatS">
+      <Filter>Game\DataFile\9.nine</Filter>
+    </None>
+    <None Include="resource\mapdata\mapStick\second.mdatS">
+      <Filter>Game\DataFile\2.second</Filter>
+    </None>
+    <None Include="resource\mapdata\mapStick\seven.mdatS">
+      <Filter>Game\DataFile\7.seven</Filter>
+    </None>
+    <None Include="resource\mapdata\mapStick\six.mdatS">
+      <Filter>Game\DataFile\6.six</Filter>
+    </None>
+    <None Include="resource\mapdata\mapStick\third.mdatS">
+      <Filter>Game\DataFile\3.Third</Filter>
+    </None>
+    <None Include="resource\mapdata\mapTouch\eight.mdatT">
+      <Filter>Game\DataFile\8.eight</Filter>
+    </None>
+    <None Include="resource\mapdata\mapWind\eight.mdatW">
+      <Filter>Game\DataFile\8.eight</Filter>
+    </None>
+    <None Include="resource\mapdata\mapTouch\five.mdatT">
+      <Filter>Game\DataFile\5.five</Filter>
+    </None>
+    <None Include="resource\mapdata\mapTouch\fourth.mdatT">
+      <Filter>Game\DataFile\4.four</Filter>
+    </None>
+    <None Include="resource\mapdata\mapTouch\nine.mdatT">
+      <Filter>Game\DataFile\9.nine</Filter>
+    </None>
+    <None Include="resource\mapdata\mapWind\nine.mdatW">
+      <Filter>Game\DataFile\9.nine</Filter>
+    </None>
+    <None Include="resource\mapdata\mapTouch\second.mdatT">
+      <Filter>Game\DataFile\2.second</Filter>
+    </None>
+    <None Include="resource\mapdata\mapTouch\seven.mdatT">
+      <Filter>Game\DataFile\7.seven</Filter>
+    </None>
+    <None Include="resource\mapdata\mapWind\seven.mdatW">
+      <Filter>Game\DataFile\7.seven</Filter>
+    </None>
+    <None Include="resource\mapdata\mapWind\six.mdatW">
+      <Filter>Game\DataFile\6.six</Filter>
+    </None>
+    <None Include="resource\mapdata\mapTouch\six.mdatT">
+      <Filter>Game\DataFile\6.six</Filter>
+    </None>
+    <None Include="resource\mapdata\mapTouch\third.mdatT">
+      <Filter>Game\DataFile\3.Third</Filter>
+    </None>
+    <None Include="resource\mapdata\mapWind\third.mdatW">
+      <Filter>Game\DataFile\3.Third</Filter>
+    </None>
+    <None Include="resource\mapdata\mapWind\five.mdatW">
+      <Filter>Game\DataFile\5.five</Filter>
+    </None>
+    <None Include="resource\mapdata\mapWind\second.mdatW">
+      <Filter>Game\DataFile\2.second</Filter>
+    </None>
+    <None Include="resource\mapdata\mapWind\fourth.mdatW">
+      <Filter>Game\DataFile\4.four</Filter>
+    </None>
+    <None Include="resource\mapdata\mapNpc\eight.mdatN">
+      <Filter>Game\DataFile\8.eight</Filter>
+    </None>
+    <None Include="resource\mapdata\mapNpc\third.mdatN">
+      <Filter>Game\DataFile\3.Third</Filter>
+    </None>
+    <None Include="resource\mapdata\mapNpc\five.mdatN">
+      <Filter>Game\DataFile\5.five</Filter>
+    </None>
+    <None Include="resource\mapdata\mapNpc\fourth.mdatN">
+      <Filter>Game\DataFile\4.four</Filter>
+    </None>
+    <None Include="resource\mapdata\mapNpc\nine.mdatN">
+      <Filter>Game\DataFile\9.nine</Filter>
+    </None>
+    <None Include="resource\mapdata\mapNpc\second.mdatN">
+      <Filter>Game\DataFile\2.second</Filter>
+    </None>
+    <None Include="resource\mapdata\mapNpc\seven.mdatN">
+      <Filter>Game\DataFile\7.seven</Filter>
+    </None>
+    <None Include="resource\mapdata\mapNpc\six.mdatN">
+      <Filter>Game\DataFile\6.six</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="resource\Location\location.txt">
+      <Filter>Game\DataFile</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

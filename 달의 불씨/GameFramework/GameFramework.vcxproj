@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{293CC276-BAE8-4B0D-8683-FDB74FFD31DA}</ProjectGuid>
+    <RootNamespace>GameFramework</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>GameFrameWork</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)FMOD\api\lowlevel\inc;$(SolutionDir)D3D\Include;$(SolutionDir)DXUT\Optional;$(SolutionDir)DXUT\Core;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)FMOD\api\lowlevel\lib;$(SolutionDir)D3D\lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)FMOD\api\lowlevel\inc;$(SolutionDir)D3D\Include;$(SolutionDir)DXUT\Optional;$(SolutionDir)DXUT\Core;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)FMOD\api\lowlevel\lib;$(SolutionDir)D3D\lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>fmod_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Animation.cpp" />
+    <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Automata.cpp" />
+    <ClCompile Include="CenterText.cpp" />
+    <ClCompile Include="Character.cpp" />
+    <ClCompile Include="CodeTable.cpp" />
+    <ClCompile Include="CrashManager.cpp" />
+    <ClCompile Include="Credit.cpp" />
+    <ClCompile Include="CSound.cpp" />
+    <ClCompile Include="CurtainCall.cpp" />
+    <ClCompile Include="DirectionA.cpp" />
+    <ClCompile Include="DirectionB.cpp" />
+    <ClCompile Include="DirectionC.cpp" />
+    <ClCompile Include="DirectionD.cpp" />
+    <ClCompile Include="DirectionE.cpp" />
+    <ClCompile Include="DirectionH.cpp" />
+    <ClCompile Include="DirectionI.cpp" />
+    <ClCompile Include="Drag.cpp" />
+    <ClCompile Include="Fan.cpp" />
+    <ClCompile Include="Fire.cpp" />
+    <ClCompile Include="Font.cpp" />
+    <ClCompile Include="Function.cpp" />
+    <ClCompile Include="Gagebar.cpp" />
+    <ClCompile Include="GUIButton.cpp" />
+    <ClCompile Include="ImageF.cpp" />
+    <ClCompile Include="ImageT.cpp" />
+    <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="ISceneNode.cpp" />
+    <ClCompile Include="Light.cpp" />
+    <ClCompile Include="Liner.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainScene.cpp" />
+    <ClCompile Include="Moon.cpp" />
+    <ClCompile Include="MouseCusor.cpp" />
+    <ClCompile Include="NextStageManager.cpp" />
+    <ClCompile Include="Npc.cpp" />
+    <ClCompile Include="Philla.cpp" />
+    <ClCompile Include="Physical.cpp" />
+    <ClCompile Include="PopUp.cpp" />
+    <ClCompile Include="PrintFont.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="ShakeScene.cpp" />
+    <ClCompile Include="SpawnManager.cpp" />
+    <ClCompile Include="Sprite.cpp" />
+    <ClCompile Include="SpriteManager.cpp" />
+    <ClCompile Include="StartScene.cpp" />
+    <ClCompile Include="Stick.cpp" />
+    <ClCompile Include="TextBox.cpp" />
+    <ClCompile Include="TextureManager.cpp" />
+    <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="Touch.cpp" />
+    <ClCompile Include="Wheel.cpp" />
+    <ClCompile Include="Wind.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Animation.h" />
+    <ClInclude Include="Application.h" />
+    <ClInclude Include="Automata.h" />
+    <ClInclude Include="CenterText.h" />
+    <ClInclude Include="Character.h" />
+    <ClInclude Include="CodeTable.h" />
+    <ClInclude Include="Console.h" />
+    <ClInclude Include="CrashManager.h" />
+    <ClInclude Include="Credit.h" />
+    <ClInclude Include="CSound.h" />
+    <ClInclude Include="CurtainCall.h" />
+    <ClInclude Include="DirectionA.h" />
+    <ClInclude Include="DirectionB.h" />
+    <ClInclude Include="DirectionC.h" />
+    <ClInclude Include="DirectionD.h" />
+    <ClInclude Include="DirectionE.h" />
+    <ClInclude Include="DirectionH.h" />
+    <ClInclude Include="DirectionI.h" />
+    <ClInclude Include="Drag.h" />
+    <ClInclude Include="Fan.h" />
+    <ClInclude Include="Fire.h" />
+    <ClInclude Include="Font.h" />
+    <ClInclude Include="Function.h" />
+    <ClInclude Include="Gagebar.h" />
+    <ClInclude Include="GUIButton.h" />
+    <ClInclude Include="ImageF.h" />
+    <ClInclude Include="ImageT.h" />
+    <ClInclude Include="InputManager.h" />
+    <ClInclude Include="ISceneNode.h" />
+    <ClInclude Include="Light.h" />
+    <ClInclude Include="Liner.h" />
+    <ClInclude Include="MainScene.h" />
+    <ClInclude Include="Moon.h" />
+    <ClInclude Include="MouseCusor.h" />
+    <ClInclude Include="NextStageManager.h" />
+    <ClInclude Include="Npc.h" />
+    <ClInclude Include="Philla.h" />
+    <ClInclude Include="Physical.h" />
+    <ClInclude Include="PopUp.h" />
+    <ClInclude Include="PrintFont.h" />
+    <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="ShakeScene.h" />
+    <ClInclude Include="SpawnManager.h" />
+    <ClInclude Include="Sprite.h" />
+    <ClInclude Include="SpriteManager.h" />
+    <ClInclude Include="StartScene.h" />
+    <ClInclude Include="Stick.h" />
+    <ClInclude Include="TextBox.h" />
+    <ClInclude Include="TextureManager.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="Touch.h" />
+    <ClInclude Include="Wheel.h" />
+    <ClInclude Include="Wind.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resource\mapdata\mapChar\eight.mdatC" />
+    <None Include="resource\mapdata\mapChar\first.mdatC" />
+    <None Include="resource\mapdata\mapChar\five.mdatC" />
+    <None Include="resource\mapdata\mapChar\fourth.mdatC" />
+    <None Include="resource\mapdata\mapChar\nine.mdatC" />
+    <None Include="resource\mapdata\mapChar\second.mdatC" />
+    <None Include="resource\mapdata\mapChar\seven.mdatC" />
+    <None Include="resource\mapdata\mapChar\six.mdatC" />
+    <None Include="resource\mapdata\mapChar\third.mdatC" />
+    <None Include="resource\mapdata\mapFan\eight.mdatF" />
+    <None Include="resource\mapdata\mapFan\first.mdatF" />
+    <None Include="resource\mapdata\mapFan\five.mdatF" />
+    <None Include="resource\mapdata\mapFan\fourth.mdatF" />
+    <None Include="resource\mapdata\mapFan\nine.mdatF" />
+    <None Include="resource\mapdata\mapFan\second.mdatF" />
+    <None Include="resource\mapdata\mapFan\seven.mdatF" />
+    <None Include="resource\mapdata\mapFan\six.mdatF" />
+    <None Include="resource\mapdata\mapFan\third.mdatF" />
+    <None Include="resource\mapdata\mapFire\eight.mdatFi" />
+    <None Include="resource\mapdata\mapFire\first.mdatFi" />
+    <None Include="resource\mapdata\mapFire\five.mdatFi" />
+    <None Include="resource\mapdata\mapFire\fourth.mdatFi" />
+    <None Include="resource\mapdata\mapFire\nine.mdatFi" />
+    <None Include="resource\mapdata\mapFire\second.mdatFi" />
+    <None Include="resource\mapdata\mapFire\seven.mdatFi" />
+    <None Include="resource\mapdata\mapFire\six.mdatFi" />
+    <None Include="resource\mapdata\mapFire\third.mdatFi" />
+    <None Include="resource\mapdata\mapLine\eight.mdatL" />
+    <None Include="resource\mapdata\mapLine\first.mdatL" />
+    <None Include="resource\mapdata\mapLine\five.mdatL" />
+    <None Include="resource\mapdata\mapLine\fourth.mdatL" />
+    <None Include="resource\mapdata\mapLine\nine.mdatL" />
+    <None Include="resource\mapdata\mapLine\second.mdatL" />
+    <None Include="resource\mapdata\mapLine\seven.mdatL" />
+    <None Include="resource\mapdata\mapLine\six.mdatL" />
+    <None Include="resource\mapdata\mapLine\third.mdatL" />
+    <None Include="resource\mapdata\mapNpc\eight.mdatN" />
+    <None Include="resource\mapdata\mapNpc\first.mdatN" />
+    <None Include="resource\mapdata\mapNpc\five.mdatN" />
+    <None Include="resource\mapdata\mapNpc\fourth.mdatN" />
+    <None Include="resource\mapdata\mapNpc\nine.mdatN" />
+    <None Include="resource\mapdata\mapNpc\second.mdatN" />
+    <None Include="resource\mapdata\mapNpc\seven.mdatN" />
+    <None Include="resource\mapdata\mapNpc\six.mdatN" />
+    <None Include="resource\mapdata\mapNpc\third.mdatN" />
+    <None Include="resource\mapdata\mapPhilla\eight.mdatP" />
+    <None Include="resource\mapdata\mapPhilla\first.mdatP" />
+    <None Include="resource\mapdata\mapPhilla\five.mdatP" />
+    <None Include="resource\mapdata\mapPhilla\fourth.mdatP" />
+    <None Include="resource\mapdata\mapPhilla\nine.mdatP" />
+    <None Include="resource\mapdata\mapPhilla\second.mdatP" />
+    <None Include="resource\mapdata\mapPhilla\seven.mdatP" />
+    <None Include="resource\mapdata\mapPhilla\six.mdatP" />
+    <None Include="resource\mapdata\mapPhilla\third.mdatP" />
+    <None Include="resource\mapdata\mapStick\eight.mdatS" />
+    <None Include="resource\mapdata\mapStick\first.mdatS" />
+    <None Include="resource\mapdata\mapStick\five.mdatS" />
+    <None Include="resource\mapdata\mapStick\fourth.mdatS" />
+    <None Include="resource\mapdata\mapStick\nine.mdatS" />
+    <None Include="resource\mapdata\mapStick\second.mdatS" />
+    <None Include="resource\mapdata\mapStick\seven.mdatS" />
+    <None Include="resource\mapdata\mapStick\six.mdatS" />
+    <None Include="resource\mapdata\mapStick\third.mdatS" />
+    <None Include="resource\mapdata\mapTouch\eight.mdatT" />
+    <None Include="resource\mapdata\mapTouch\first.mdatT" />
+    <None Include="resource\mapdata\mapTouch\five.mdatT" />
+    <None Include="resource\mapdata\mapTouch\fourth.mdatT" />
+    <None Include="resource\mapdata\mapTouch\nine.mdatT" />
+    <None Include="resource\mapdata\mapTouch\second.mdatT" />
+    <None Include="resource\mapdata\mapTouch\seven.mdatT" />
+    <None Include="resource\mapdata\mapTouch\six.mdatT" />
+    <None Include="resource\mapdata\mapTouch\third.mdatT" />
+    <None Include="resource\mapdata\mapWind\eight.mdatW" />
+    <None Include="resource\mapdata\mapWind\first.mdatW" />
+    <None Include="resource\mapdata\mapWind\five.mdatW" />
+    <None Include="resource\mapdata\mapWind\fourth.mdatW" />
+    <None Include="resource\mapdata\mapWind\nine.mdatW" />
+    <None Include="resource\mapdata\mapWind\second.mdatW" />
+    <None Include="resource\mapdata\mapWind\seven.mdatW" />
+    <None Include="resource\mapdata\mapWind\six.mdatW" />
+    <None Include="resource\mapdata\mapWind\third.mdatW" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="resource\Location\location.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

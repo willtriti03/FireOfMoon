@@ -1,0 +1,131 @@
+﻿Build started 2016-11-04 오전 4:56:26.
+     1>Project "C:\Users\jungjune\Desktop\FireOfMoon\fuck\GameFramework\GameFramework.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         E:\ProgramFiles\VS\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt StartScene.cpp
+         StartScene.cpp
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\d3d\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50092) : see previous definition of 'DXGI_STATUS_OCCLUDED'
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\d3d\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50101) : see previous definition of 'DXGI_STATUS_CLIPPED'
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\d3d\include\dxgitype.h(14): warning C4005: 'DXGI_STATUS_NO_REDIRECTION' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50110) : see previous definition of 'DXGI_STATUS_NO_REDIRECTION'
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\d3d\include\dxgitype.h(15): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50119) : see previous definition of 'DXGI_STATUS_NO_DESKTOP_ACCESS'
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\d3d\include\dxgitype.h(16): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50128) : see previous definition of 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE'
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\d3d\include\dxgitype.h(17): warning C4005: 'DXGI_STATUS_MODE_CHANGED' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50137) : see previous definition of 'DXGI_STATUS_MODE_CHANGED'
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\d3d\include\dxgitype.h(18): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50146) : see previous definition of 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS'
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\d3d\include\dxgitype.h(21): warning C4005: 'DXGI_ERROR_INVALID_CALL' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50161) : see previous definition of 'DXGI_ERROR_INVALID_CALL'
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\d3d\include\dxgitype.h(22): warning C4005: 'DXGI_ERROR_NOT_FOUND' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50170) : see previous definition of 'DXGI_ERROR_NOT_FOUND'
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\d3d\include\dxgitype.h(23): warning C4005: 'DXGI_ERROR_MORE_DATA' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50179) : see previous definition of 'DXGI_ERROR_MORE_DATA'
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\d3d\include\dxgitype.h(24): warning C4005: 'DXGI_ERROR_UNSUPPORTED' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50188) : see previous definition of 'DXGI_ERROR_UNSUPPORTED'
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\d3d\include\dxgitype.h(25): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50197) : see previous definition of 'DXGI_ERROR_DEVICE_REMOVED'
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\d3d\include\dxgitype.h(26): warning C4005: 'DXGI_ERROR_DEVICE_HUNG' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50206) : see previous definition of 'DXGI_ERROR_DEVICE_HUNG'
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\d3d\include\dxgitype.h(27): warning C4005: 'DXGI_ERROR_DEVICE_RESET' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50216) : see previous definition of 'DXGI_ERROR_DEVICE_RESET'
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\d3d\include\dxgitype.h(28): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50225) : see previous definition of 'DXGI_ERROR_WAS_STILL_DRAWING'
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\d3d\include\dxgitype.h(29): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50235) : see previous definition of 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT'
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\d3d\include\dxgitype.h(30): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50244) : see previous definition of 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE'
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\d3d\include\dxgitype.h(31): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50254) : see previous definition of 'DXGI_ERROR_DRIVER_INTERNAL_ERROR'
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\d3d\include\dxgitype.h(32): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50263) : see previous definition of 'DXGI_ERROR_NONEXCLUSIVE'
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\d3d\include\dxgitype.h(33): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50272) : see previous definition of 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE'
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\d3d\include\dxgitype.h(34): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50282) : see previous definition of 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED'
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\d3d\include\dxgitype.h(35): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50291) : see previous definition of 'DXGI_ERROR_REMOTE_OUTOFMEMORY'
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\d3d\include\d3d10.h(608): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50445) : see previous definition of 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\d3d\include\d3d10.h(609): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50454) : see previous definition of 'D3D10_ERROR_FILE_NOT_FOUND'
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\gameframework\ISceneNode.h(41): warning C4244: 'argument' : conversion from 'int' to 'FLOAT', possible loss of data
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\gameframework\Animation.h(35): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\gameframework\Physical.h(42): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\gameframework\Physical.h(43): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\gameframework\Physical.h(69): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\gameframework\Fire.h(38): warning C4244: 'return' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\gameframework\Fire.h(50): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\gameframework\Fire.h(51): warning C4305: '-=' : truncation from 'double' to 'float'
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\gameframework\Fire.h(59): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\gameframework\Light.h(27): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\gameframework\Gagebar.h(22): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>StartScene.cpp(71): warning C4996: 'getcwd': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getcwd. See online help for details.
+                 E:\ProgramFiles\VS\VC\include\direct.h(130) : see declaration of 'getcwd'
+       Link:
+         E:\ProgramFiles\VS\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\jungjune\Desktop\FireOfMoon\fuck\Release\GameFrameWork.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\jungjune\Desktop\FireOfMoon\fuck\Release\GameFrameWork.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\jungjune\Desktop\FireOfMoon\fuck\Release\GameFrameWork.lib" /MACHINE:X86 /SAFESEH Release\Animation.obj
+         Release\Application.obj
+         Release\Automata.obj
+         Release\CenterText.obj
+         Release\Character.obj
+         Release\CodeTable.obj
+         Release\CrashManager.obj
+         Release\Credit.obj
+         Release\CSound.obj
+         Release\CurtainCall.obj
+         Release\DirectionA.obj
+         Release\DirectionB.obj
+         Release\DirectionC.obj
+         Release\DirectionD.obj
+         Release\DirectionE.obj
+         Release\DirectionH.obj
+         Release\DirectionI.obj
+         Release\Drag.obj
+         Release\Fan.obj
+         Release\Fire.obj
+         Release\Font.obj
+         Release\Function.obj
+         Release\Gagebar.obj
+         Release\GUIButton.obj
+         Release\ImageF.obj
+         Release\ImageT.obj
+         Release\InputManager.obj
+         Release\ISceneNode.obj
+         Release\Light.obj
+         Release\Liner.obj
+         Release\main.obj
+         Release\MainScene.obj
+         Release\Moon.obj
+         Release\MouseCusor.obj
+         Release\NextStageManager.obj
+         Release\Npc.obj
+         Release\Philla.obj
+         Release\Physical.obj
+         Release\PopUp.obj
+         Release\PrintFont.obj
+         Release\SceneManager.obj
+         Release\ShakeScene.obj
+         Release\SpawnManager.obj
+         Release\Sprite.obj
+         Release\SpriteManager.obj
+         Release\StartScene.obj
+         Release\Stick.obj
+         Release\TextBox.obj
+         Release\TextureManager.obj
+         Release\Timer.obj
+         Release\Touch.obj
+         Release\Wheel.obj
+         Release\Wind.obj
+         Generating code
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\gameframework\inputmanager.cpp(33): warning C4715: 'InputManager::keyState' : not all control paths return a value
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\gameframework\spawnmanager.cpp(164): warning C4715: 'SpawnManager::ChageBool' : not all control paths return a value
+     1>c:\users\jungjune\desktop\fireofmoon\fuck\gameframework\character.cpp(331): warning C4715: 'Character::ItemEvent' : not all control paths return a value
+         Finished generating code
+         GameFramework.vcxproj -> C:\Users\jungjune\Desktop\FireOfMoon\fuck\Release\GameFrameWork.exe
+     1>Done Building Project "C:\Users\jungjune\Desktop\FireOfMoon\fuck\GameFramework\GameFramework.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:07.19
