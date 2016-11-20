@@ -13,7 +13,7 @@ DirectionA::DirectionA()
 	m_pGlove = new Sprite("resource/item/touch/touch.png");
 	m_pGlove->SetPosition(660, 550);
 	m_pLight = new Sprite("resource/background/light.png");
-	m_pLight->SetScale(D3DXVECTOR2(0.6,0.6));
+	m_pLight->SetScale(D3DXVECTOR2(0.6, 0.6));
 	m_pLight->SetPosition(160, 0);
 	m_pFire = new Animation();
 	m_pFire->Create(3, 15, true);
@@ -41,8 +41,8 @@ void DirectionA::Update(float eTime) {
 	m_pGlove->Update(eTime);
 	TimeMgr->Update(eTime);
 
-	if ((StartTime <=TimeMgr->GetTime()) && m_pCharacter->GetCenterPosition().x>512) {
-		m_pCharacter->SetPosition(m_pCharacter->GetPosition().x-100*eTime, m_pCharacter->GetPosition().y);
+	if ((StartTime <= TimeMgr->GetTime()) && m_pCharacter->GetCenterPosition().x>512) {
+		m_pCharacter->SetPosition(m_pCharacter->GetPosition().x - 100 * eTime, m_pCharacter->GetPosition().y);
 		m_pPhilla->SetPosition(m_pPhilla->GetPosition().x - 100 * eTime, m_pPhilla->GetPosition().y);
 		m_pFire->SetPosition(m_pFire->GetPosition().x - 100 * eTime, m_pFire->GetPosition().y);
 		m_pGlove->SetPosition(m_pGlove->GetPosition().x - 100 * eTime, m_pGlove->GetPosition().y);

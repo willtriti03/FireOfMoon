@@ -3,7 +3,7 @@
 #include "DirectionI.h"
 #include <conio.h>
 #include "PopUp.h"
-
+#include "Ocean.h"
 
 #define FIRE	"resource\\mapdata\\mapFire\\"
 #define NPC		"resource\\mapdata\\mapNpc\\"
@@ -14,7 +14,9 @@
 #define MAP		"resource\\mapdata\\mapLine\\"
 #define FAN		"resource\\mapdata\\mapFan\\"
 #define CHARA	"resource\\mapdata\\mapChar\\"
-
+#define HYENA	"resource\\mapdata\\mapHyena\\"
+#define OCEAN	"resource\\mapdata\\mapOcean\\"
+#define PULLEY	"resource\\mapdata\\mapPulley\\"
 
 MainScene::MainScene(string mapName){
 
@@ -26,13 +28,31 @@ MainScene::MainScene(string mapName){
 	LoadData(mapName);
 	m_pMap = new Sprite("resource/map/"+mapName+".png");
 	m_pStarMap = new Sprite("resource/background/bg.png");
-	m_pMap->SetPosition(D3DXVECTOR2(0, -5));
 	m_pChar = new Character(pixcelPoint, max, D3DXVECTOR2(463, 100), this, m_pSpawn, m_pLight, m_pCrash);
+	m_pMap->SetPosition(D3DXVECTOR2(0, -5));
 	m_pDirect = new DirectionI(mapName);
 	ifstream fp(CHARA + mapName + ".mdatC");
 	fp >> x >> y;
 	fp.close();
 	m_pChar->SetMovement(x, y);
+
+	int maxum;
+	fp.open(HYENA + mapName + ".mdatH");
+	fp >> maxum;
+	m_pHyena = new Hyena[maxum];
+	for (int i = 0; i < maxum; ++i){
+		fp >> x >> y >> rt;
+		m_pHyena[i].SetCrashMgr(m_pCrash);
+		m_pHyena[i].SetPos(x, y);
+		m_pHyena[i].SetRenderBool(rt);
+		m_pHyena[i].SetPhyCode(6);
+		m_pHyena[i].SetChar(m_pChar);
+		m_pHyena[i].SetSpawn(m_pSpawn);
+	}
+	m_pSpawn->PushHyena(m_pHyena, maxum);
+
+	fp.close();
+
 
 	m_pFonts	= new PrintFont();
 	m_pPopUp	= new PopUp();
@@ -206,6 +226,25 @@ void MainScene::LoadData(string mapName){
 	fp.close();
 
 
+	fp.open(PULLEY + mapName + ".mdatPu");
+	fp >> maxum;
+	m_pPulley = new Pulley[max];
+	for (int i = 0; i < maxum; ++i){
+		fp >> x >> y >> rt;
+		m_pPulley[i].SetCrashMgr(m_pCrash);
+		m_pPulley[i].SetPos(x, y);
+		m_pPulley[i].SetRenderBool(rt);
+		m_pPulley[i].SetPhyCode(7);
+	}
+	m_pSpawn->PushPulley(m_pPulley,maxum);
+
+	fp.close();
+
+
+	fp.open(OCEAN + mapName + ".mdatO");
+
+
+	fp.close();
 
 	bool as;
 	fp.open(PHILLA + mapName + ".mdatP");
@@ -235,5 +274,29 @@ void MainScene::LoadData(string mapName){
 	}
 	fp.close();
 
+	fp.open(OCEAN + mapName + ".mdatO");
+	fp >> maxum;
+	m_pPole = new Pole[2 * maxum];
+	m_pZeepLine = new ZeepLine[maxum];
+	for (int i = 0; i < maxum*2; i+=2){
+		fp >> windPoint.x >> windPoint.y>>y;
+		OceanMgr->SetOcean(windPoint.x,windPoint.y);
 		
+		m_pPole[i].SetCrashMgr(m_pCrash);
+		m_pPole[i].SetPos(windPoint.x, y);
+		m_pPole[i].SetRenderBool(true);
+		m_pPole[i].SetPhyCode(8);
+
+		m_pPole[i+1].SetCrashMgr(m_pCrash);
+		m_pPole[i+1].SetPos(windPoint.y, y);
+		m_pPole[i+1].SetRenderBool(true);
+		m_pPole[i+1].SetPhyCode(8);
+		
+		m_pZeepLine[i / 2].SetPole(m_pPole[i],m_pPole[i+1]);	
+		m_pPole[i].SetAddress((int)&(m_pZeepLine[i / 2]));
+		m_pPole[i+1].SetAddress((int)&(m_pZeepLine[i / 2]));
+			
+	}
+	m_pSpawn->PushPole(m_pPole, maxum*2);
+	fp.close();
 }

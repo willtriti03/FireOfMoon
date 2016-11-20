@@ -1,5 +1,6 @@
 #include "SpawnManager.h"
 #include "Light.h"
+#include "Hyena.h"
 
 #define TOUCH	"resource\\mapdata\\mapTouch\\"
 SpawnManager::SpawnManager()
@@ -15,62 +16,88 @@ SpawnManager::~SpawnManager()
 
 void SpawnManager::Update(float eTime){
 	ISceneNode::Update(eTime);
-	list<RenderTouch>::iterator iter;
+	
 	for (iter = m_lTouch.begin(); iter != m_lTouch.end(); iter++){
 		if ((iter->renderBool) == true)
 			iter->m_pTouch->Update(eTime);
 	}
-	list<RenderNpc>::iterator iter2;
+
 	for (iter2 = m_lNpc.begin(); iter2 != m_lNpc.end(); iter2++){
 		if ((iter2->renderBool) == true)
 			iter2->m_pNpc->Update(eTime);
 	}
-	list<RenderFan>::iterator iter3;
+	
 	for (iter3 = m_lFan.begin(); iter3 != m_lFan.end(); iter3++){
 		if ((iter3->renderBool) == true)
 			iter3->m_pFan->Update(eTime);
 	}
-	list<RenderStick>::iterator iter4;
+
 	for (iter4 = m_lStick.begin(); iter4 != m_lStick.end(); iter4++){
 		if ((iter4->renderBool) == true){
 			iter4->m_pStick->Update(eTime);
 		}
 	}
-	list < RenderPhilla > ::iterator iter5;
 	for (iter5 = m_lPhilla.begin(); iter5 != m_lPhilla.end(); iter5++){
 		if ((iter5->renderBool) == true)
 			iter5->m_pPhilla->Update(eTime);
 
 	}
 
+	for (iter6 = m_lHyena.begin(); iter6 != m_lHyena.end(); iter6++){
+		if ((iter6->renderBool) == true)
+			iter6->m_pHyena->Update(eTime);
+
+	}
+
+	for (iter7 = m_lPulley.begin(); iter7 != m_lPulley.end(); iter7++){
+		if ((iter7->renderBool) == true)
+			iter7->m_pPulley->Update(eTime);
+
+	}
+	for (iter8 = m_lPole.begin(); iter8 != m_lPole.end(); iter8++){
+		if ((iter8->renderBool) == true)
+			iter8->m_pPole->Update(eTime);
+
+	}
 }
 
 void SpawnManager::Render(){
 	ISceneNode::Render();
-	list<RenderTouch>::iterator iter;
 	for (iter = m_lTouch.begin(); iter != m_lTouch.end(); iter++){
 		if ((iter->renderBool) == true)
 			iter->m_pTouch->Render();
 	}
-	list<RenderNpc>::iterator iter2;
 	for (iter2 = m_lNpc.begin(); iter2 != m_lNpc.end(); iter2++){
 		if ((iter2->renderBool) == true)
 			iter2->m_pNpc->Render();
 	}
-	list<RenderFan>::iterator iter3;
 	for (iter3 = m_lFan.begin(); iter3 != m_lFan.end(); iter3++){
 		if ((iter3->renderBool) == true)
 			iter3->m_pFan->Render();
 	}
-	list<RenderStick>::iterator iter4;
 	for (iter4 = m_lStick.begin(); iter4 != m_lStick.end(); iter4++){
 		if ((iter4->renderBool) == true)
 			iter4->m_pStick->Render();
 	}
-	list < RenderPhilla > ::iterator iter5;
 	for (iter5 = m_lPhilla.begin(); iter5 != m_lPhilla.end(); iter5++){
 		if ((iter5->renderBool) == true)
 			iter5->m_pPhilla->Render();
+	}
+	for (iter6 = m_lHyena.begin(); iter6 != m_lHyena.end(); iter6++){
+		if ((iter6->renderBool) == true)
+			iter6->m_pHyena->Render();
+
+	}
+
+	for (iter7 = m_lPulley.begin(); iter7 != m_lPulley.end(); iter7++){
+		if ((iter7->renderBool) == true)
+			iter7->m_pPulley->Render();
+
+	}
+	for (iter8 = m_lPole.begin(); iter8 != m_lPole.end(); iter8++){
+		if ((iter8->renderBool) == true)
+			iter8->m_pPole->Render();
+
 	}
 }
 
@@ -119,9 +146,33 @@ void SpawnManager::PushNpc(Npc *npc, int max){
 		m_lNpc.push_back(rp);
 	}
 }
+
+void SpawnManager::PushHyena(Hyena *hyena, int max){
+	struct RenderHyena rp;
+	for (int i = 0; i < max; ++i){
+		rp.m_pHyena = hyena[i].GetInstance();
+		rp.renderBool = hyena[i].GetRenderBool();
+		m_lHyena.push_back(rp);
+	}
+}
+void SpawnManager::PushPulley(Pulley *pulley, int max){
+	struct RenderPulley rp;
+	for (int i = 0; i < max; ++i){
+		rp.m_pPulley = pulley[i].GetInstance();
+		rp.renderBool = pulley[i].GetRenderBool();
+		m_lPulley.push_back(rp);
+	}
+}
+void SpawnManager::PushPole(Pole *pole, int max){
+	struct RenderPole rp;
+	for (int i = 0; i < max; ++i){
+		rp.m_pPole = pole[i].GetInstance();
+		rp.renderBool = pole[i].GetRenderBool();
+		m_lPole.push_back(rp);
+	}
+}
 bool SpawnManager::ChageBool(Physical *phy, bool boolean){
 	int address= phy->GetAddress();
-	list<RenderTouch>::iterator iter;
 	for (iter = m_lTouch.begin(); iter != m_lTouch.end(); iter++){
 		if ((int)iter->m_pTouch == address){
 			iter->renderBool = boolean;
@@ -129,7 +180,6 @@ bool SpawnManager::ChageBool(Physical *phy, bool boolean){
 			return true;
 		}
 	}
-	list<RenderNpc>::iterator iter2;
 	for (iter2 = m_lNpc.begin(); iter2 != m_lNpc.end(); iter2++){
 		if ((int)iter2->m_pNpc == address){
 			iter2->renderBool = boolean;
@@ -137,7 +187,6 @@ bool SpawnManager::ChageBool(Physical *phy, bool boolean){
 			return true;
 		}
 	}
-	list<RenderFan>::iterator iter3;
 	for (iter3 = m_lFan.begin(); iter3 != m_lFan.end(); iter3++){
 		if ((int)iter3->m_pFan == address){
 			iter3->renderBool = boolean;
@@ -145,7 +194,6 @@ bool SpawnManager::ChageBool(Physical *phy, bool boolean){
 			return true;
 		}
 	}
-	list<RenderStick>::iterator iter4;
 	for (iter4 = m_lStick.begin(); iter4 != m_lStick.end(); iter4++){
 		if ((int)iter4->m_pStick == address){
 			iter4->renderBool = boolean;
@@ -153,7 +201,6 @@ bool SpawnManager::ChageBool(Physical *phy, bool boolean){
 			return true;
 		}
 	}
-	list < RenderPhilla > ::iterator iter5;
 	for (iter5 = m_lPhilla.begin(); iter5 != m_lPhilla.end(); iter5++){
 		if ((int)iter5->m_pPhilla == address){
 			iter5->renderBool = boolean;
@@ -161,12 +208,40 @@ bool SpawnManager::ChageBool(Physical *phy, bool boolean){
 			return true;
 		}
 	}
+	for (iter6 = m_lHyena.begin(); iter6 != m_lHyena.end(); iter6++){
+		if ((int)iter6->m_pHyena == address){
+			iter6->renderBool = boolean;
+			iter6->m_pHyena->SetRenderBool(boolean);
+			return true;
+		}
+	}
+	for (iter7 = m_lPulley.begin(); iter7 != m_lPulley.end(); iter7++){
+		if ((int)iter7->m_pPulley == address){
+			iter7->renderBool = boolean;
+			iter7->m_pPulley->SetRenderBool(boolean);
+			return true;
+		}
+	}
+	for (iter8 = m_lPole.begin(); iter8 != m_lPole.end(); iter8++){
+		if ((int)iter8->m_pPole == address){
+			iter8->renderBool = boolean;
+			iter8->m_pPole->SetRenderBool(boolean);
+			return true;
+		}
+
+	}
+
 }
 void SpawnManager::FflushList(){
 	m_lTouch.clear();
 	m_lFan.clear();
 	m_lPhilla.clear();
 	m_lStick.clear();
+	m_lNpc.clear();
+	m_lHyena.clear();
+	m_lPulley.clear();
+	m_lPole.clear();
+	
 }
 
 void SpawnManager::SetFirePhilla(int x,int y){
@@ -191,31 +266,35 @@ void SpawnManager::SetFirePhilla(D3DXVECTOR2 point){
 	}
 }
 void SpawnManager::MoveMap(int move){
-	list<RenderTouch>::iterator iter;
 	for (iter = m_lTouch.begin(); iter != m_lTouch.end(); iter++){
 		iter->m_pTouch->SetSunPosition(-1 * move, 0);
 	}
-	list<RenderNpc>::iterator iter2;
 	for (iter2 = m_lNpc.begin(); iter2 != m_lNpc.end(); iter2++){
 		iter2->m_pNpc->SetSunPosition(-1 * move, 0);
 	}
-	list<RenderFan>::iterator iter3;
 	for (iter3 = m_lFan.begin(); iter3 != m_lFan.end(); iter3++){
 		iter3->m_pFan->SetSunPosition(-1 * move, 0);
 	}
-	list<RenderStick>::iterator iter4;
 	for (iter4 = m_lStick.begin(); iter4 != m_lStick.end(); iter4++){
 		iter4->m_pStick->SetSunPosition(-1 * move, 0);
 	}
-	list < RenderPhilla > ::iterator iter5;
 	for (iter5 = m_lPhilla.begin(); iter5 != m_lPhilla.end(); iter5++){
 		iter5->m_pPhilla->SetSunPosition(-1 * move, 0);
 	}
+	for (iter6 = m_lHyena.begin(); iter6 != m_lHyena.end(); iter6++){
+		iter6->m_pHyena->SetSunPosition(-1 * move, 0);
+	}
+	for (iter7 = m_lPulley.begin(); iter7 != m_lPulley.end(); iter7++){
+		iter7->m_pPulley->SetSunPosition(-1 * move, 0);
+	}
+	for (iter8 = m_lPole.begin(); iter8 != m_lPole.end(); iter8++){
+		iter8->m_pPole->SetSunPosition(-1 * move, 0);
+	}
+
 	if (m_pLight->GetPhillaBool())
 		m_pLight->SetLightPosition(-1 * move, 0);
 }
 void SpawnManager::SwitchPoint(D3DXVECTOR2 pos){
-	list<RenderTouch>::iterator iter;
 	for (iter = m_lTouch.begin(); iter != m_lTouch.end(); iter++){
 		iter->m_pTouch->SetPos(pos.x,pos.y);
 		iter->m_pTouch->SetRenderBool(true);
@@ -246,7 +325,6 @@ void SpawnManager::CommitGlove(string stage){
 	}
 	if (path.compare("")!=0){
 		ofstream fp(TOUCH + path + ".mdatT");
-		list<RenderTouch>::iterator iter;
 		fp << "1"<<"\n";
 		for (iter = m_lTouch.begin(); iter != m_lTouch.end(); iter++){
 			fp << iter->m_pTouch->GetSunPosition().x << " " << iter->m_pTouch->GetSunPosition().y <<" 1\n";
@@ -257,7 +335,6 @@ void SpawnManager::CommitGlove(string stage){
 void SpawnManager::CommitShakes(D3DXVECTOR2 mapPos, D3DXVECTOR2 charPos){
 	ofstream fp("resource/Location/location.txt");
 	fp << (int)mapPos.x << " " << (int)mapPos.y << "\n";
-	list < RenderPhilla > ::iterator iter5;
 	for (iter5 = m_lPhilla.begin(); iter5 != m_lPhilla.end(); iter5++){
 		if (iter5->m_pPhilla->GetFireBool()){
 			fp << (int)iter5->m_pPhilla->GetSunPosition().x << " " << (int)iter5->m_pPhilla->GetSunPosition().y << "\n";

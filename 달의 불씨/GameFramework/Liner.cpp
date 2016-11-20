@@ -12,7 +12,7 @@ Liner::Liner()
 
 Liner::~Liner()
 {
-
+	liner->End();
 }
 
 void Liner::SetWid(int a){

@@ -7,7 +7,6 @@ Light::Light()
 	m_pLight = new Sprite("resource/background/light.png");
 	half_width = m_pLight->GetRect().right / 2;
 	half_height = m_pLight->GetRect().bottom / 2;
-
 }
 
 
@@ -38,7 +37,7 @@ void Light::UpdateCenterPos(Fire *fire){
 	CenterX = (PhysicalX - half_width);
 	CenterY = PhysicalY - half_height;
 
-	startPos = D3DXVECTOR2(CenterX + (20 * (FireMgr->GetFireSize() - 1)), CenterY - (10 * (FireMgr->GetFireSize() - 1)));
+	startPos = D3DXVECTOR2(CenterX, CenterY);
 }
 
 void Light::LightScale(float lightpower) {

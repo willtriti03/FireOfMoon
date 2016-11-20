@@ -5,6 +5,13 @@
 #include "Sprite.h"
 #include "InputManager.h"
 #include "PrintFont.h"
+#pragma once
+
+#include "ISceneNode.h"
+#include "Physical.h"
+#include "Sprite.h"
+#include "InputManager.h"
+#include "PrintFont.h"
 #include "Animation.h"
 #include "Sprite.h"
 #include "CSound.h"
@@ -26,12 +33,16 @@ private:
 	int            glove = 0;
 	int            right;
 
+	float         starttime;
+
 	bool         bring = false;
 	bool         stop = false;
 	bool         check2 = true;
-	bool		 oneTime = false;
+	bool       oneTime = false;
+	bool         jumpcheck = false;
+	bool         grcheck = false;
 
-	Touch			*touchsaver;
+	Touch         *touchsaver;
 	Fire         *m_pFire;
 	RECT         collision;
 	Physical      *phy;
@@ -42,18 +53,19 @@ private:
 	PrintFont      *m_pFont;
 	D3DXVECTOR2      startPosition;
 	D3DXVECTOR2      windstate;
-	Animation		 *m_pAnim;
-	SpawnManager	*m_pSpawn;
-	Light			*m_pLight;
-	CrashManager	*m_pCrash;
-	CSound			*m_pWalk;
-	CSound			*m_pWind;
+	Animation       *m_pAnim;
+	SpawnManager   *m_pSpawn;
+	Light         *m_pLight;
+	CrashManager   *m_pCrash;
+	CSound         *m_pWalk;
+	CSound         *m_pWind;
 public:
-	Character(D3DXVECTOR2 *list, int max, D3DXVECTOR2 startPos, MainScene *main, SpawnManager *sm, Light *lg,CrashManager *cm);
+	Character(D3DXVECTOR2 *list, int max, D3DXVECTOR2 startPos, MainScene *main, SpawnManager *sm, Light *lg, CrashManager *cm);
 	~Character();
 	int GetMovement() { return movement; };
 	int GetWatchingView() { return watchingView; };
 
+	bool GetFireBring(){ return bring; };
 	bool ItemEvent(int useCode, Physical *target);
 	bool check;
 	void SetWatchingView(int watch) { watchingView = watch; };
@@ -79,6 +91,8 @@ public:
 	void RightAniSet();
 	void LeftAniSet();
 	void AniReset();
+
+	void Jump();
 
 	void Update(float eTime);
 	void Render();

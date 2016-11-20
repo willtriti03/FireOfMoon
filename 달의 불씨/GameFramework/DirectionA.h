@@ -6,7 +6,7 @@
 #include "SceneManager.h"
 #include "MainScene.h"
 
-class DirectionA:public ISceneNode
+class DirectionA :public ISceneNode
 {
 private:
 	Sprite *m_pFloor;
@@ -26,4 +26,3 @@ public:
 	void Update(float eTime);
 	void Render();
 };
-

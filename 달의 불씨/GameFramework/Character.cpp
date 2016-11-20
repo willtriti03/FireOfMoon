@@ -24,12 +24,12 @@ Character::Character(D3DXVECTOR2 *list, int max, D3DXVECTOR2 startPos, MainScene
 	SetGravityObject(m_pCharacter);
 	SetTemCollison();
 
-	right = 1023 - m_pCharacter->GetRect().right;
+	right = 1022 - m_pCharacter->GetRect().right;
 	FireMgr->GetChar(this);
 
 	m_pAnim = new Animation();
 	RunAnimRight();
-	m_pWalk =new CSound("resource/Sound/step_2.wav",true);
+	m_pWalk = new CSound("resource/Sound/step_2.wav", true);
 	m_pWalk->Play();
 	m_pWalk->volumeUp();
 	m_pWalk->Pause();
@@ -40,6 +40,7 @@ Character::Character(D3DXVECTOR2 *list, int max, D3DXVECTOR2 startPos, MainScene
 	m_pWind->volumeUp();
 	m_pWind->volumeUp();
 	m_pWind->Pause();
+
 
 }
 
@@ -57,7 +58,6 @@ void Character::Update(float eTime) {
 	m_pAnim->SetPosition(m_pCharacter->GetPosition());
 	m_pAnim->Update(eTime);
 	gravityMode = 0;
-
 	if (InputMgr->keyState(39) == 3 && m_pCharacter->GetPosition().x < right) {
 		movement += MOVE;
 		if (movement > 0 && movement < max - 1024) {
@@ -87,7 +87,7 @@ void Character::Update(float eTime) {
 
 	}
 	m_pTmp = m_pCrash->CheckTest(movement);
-	if (m_pTmp->GetPhyCode() != 0 && m_pTmp->GetPhyCode() != 2&& m_pTmp->GetPhyCode()!=5)
+	if (m_pTmp->GetPhyCode() != 0 && m_pTmp->GetPhyCode() != 2 && m_pTmp->GetPhyCode() != 5)
 		m_pFont->Play(5);
 	//printf("%d %d\n", hand, glove);
 	if (InputMgr->keyState('Z') == 4) {
@@ -106,24 +106,27 @@ void Character::Update(float eTime) {
 				hand = m_pBring->GetPhyCode();
 				if (hand == 3)
 					m_pFont->Play(3);
-				else if (hand==4)
+				else if (hand == 4)
 					m_pFont->Play(4);
 
 			}
 		}
-		else if(!(hand!=1&&hand!=0)||bring){
+		else if (!(hand != 1 && hand != 0) || bring) {
 			m_pFont->Play(2);
 		}
-		if (glove == 1 && hand == 0){
+		if (glove == 1 && hand == 0) {
 			hand = 1;
 			m_pBring = touchsaver;
+		}
+		else if (bring && (hand = m_pBring->GetPhyCode()) != 1){
+			if (ItemEvent(hand, m_pCrash->CheckTest(movement)));
 		}
 
 	}
 
 	if (InputMgr->keyState('X') == 4) {
 		if (ItemEvent(hand, m_pCrash->CheckTest(movement)));
-		
+
 	}
 	if (m_pCharacter->GetPosition().x > right) {
 		m_pCharacter->SetPosition(1024 - m_pCharacter->GetRect().right, m_pCharacter->GetPosition().y);
@@ -136,7 +139,7 @@ void Character::Update(float eTime) {
 	Gravity(&movement, stop);
 	//printf("%d %f %f\n", movement, m_pCharacter->GetPosition().x,m_pCharacter->GetPosition().y);
 	windstate = WindMgr->WindZoneCheck(D3DXVECTOR2(movement + 512, 0));
-	if (windstate.x == 1&&bring) {
+	if (windstate.x == 1 && bring) {
 		if (windstate.y * watchingView == -1 && windstate.y == 1) {
 			FireMgr->RightAni();
 			m_pWind->Resume();
@@ -171,6 +174,7 @@ void Character::Update(float eTime) {
 		check2 = true;
 		m_pWalk->Pause();
 	}
+	Jump();
 
 
 }
@@ -179,12 +183,12 @@ void Character::Render() {
 	ISceneNode::Render();
 	if (check2 == true)
 		m_pCharacter->Render();
-	if(check2==false)
+	if (check2 == false)
 		m_pAnim->Render();
 }
 
 void Character::SetMovement(int x, int y) {
-	movement = x -495;
+	movement = x - 495;
 	if (movement < 0) {
 		m_pCharacter->SetPosition(x, y);
 	}
@@ -194,7 +198,7 @@ void Character::SetMovement(int x, int y) {
 
 	}
 	else {
-		m_pCharacter->SetPosition(m_pCharacter->GetPosition().x , y);
+		m_pCharacter->SetPosition(m_pCharacter->GetPosition().x, y);
 		m_pMain->CharacterMoved(movement);
 	}
 
@@ -248,7 +252,7 @@ bool Character::ItemEvent(int useCode, Physical *target) {
 					Fire_useAnimLeft();
 				check2 = false;
 				th->TurnOff();
-				FireMgr->LostChar();		
+				FireMgr->LostChar();
 				ph->SetFire(true);
 				ph->GetFire(FireMgr);
 
@@ -274,7 +278,7 @@ bool Character::ItemEvent(int useCode, Physical *target) {
 			return true;
 			break;
 		case 5:
-			if (bring){
+			if (bring) {
 				StageMgr->MetNPC();
 			}
 			return true;
@@ -304,10 +308,10 @@ bool Character::ItemEvent(int useCode, Physical *target) {
 				m_pMain->UpdateControl(3);
 				GageMgr->SetGage(3);
 				GageMgr->Start();
-				m_pSpawn->SwitchPoint(m_pBring->startPos); 
+				m_pSpawn->SwitchPoint(m_pBring->startPos);
 				oneTime = false;
 				StageMgr->UpgradeFire();
-			
+
 			}
 			return true;
 			break;
@@ -398,23 +402,16 @@ void Character::StrawAnimLeft() {
 
 }
 
-void Character::ImageSet(){
-	switch (hand){
+void Character::ImageSet() {
+	switch (hand) {
 	case 0:
 	case 1:
-		if (bring){
-			if (watchingView == 1)
-				m_pCharacter->SetImage("resource/character/maincharacter_fire/r_maincharacter_fire.png");
-			else
-				m_pCharacter->SetImage("resource/character/maincharacter_fire/l_maincharacter_fire.png");
-		
-		}
-		else{
-			if (watchingView == 1)
-				m_pCharacter->SetImage("resource/character/mancharacter_base/Right/main_character.png");
-			else
-				m_pCharacter->SetImage("resource/character/mancharacter_base/Left/maincharacter.png");
-		}
+
+		if (watchingView == 1)
+			m_pCharacter->SetImage("resource/character/mancharacter_base/Right/main_character.png");
+		else
+			m_pCharacter->SetImage("resource/character/mancharacter_base/Left/maincharacter.png");
+
 		break;
 	case 3:
 		if (watchingView == 1)
@@ -432,15 +429,13 @@ void Character::ImageSet(){
 
 }
 
-void Character::RightAniSet(){
+void Character::RightAniSet() {
 	switch (hand)
 	{
 	case 0:
 	case 1:
-		if (bring)
-			FireAnimRight();
-		else
-			RunAnimRight();
+
+		RunAnimRight();
 		break;
 	case 3:
 		StrawAnimRight();
@@ -452,15 +447,13 @@ void Character::RightAniSet(){
 	}
 
 }
-void Character::LeftAniSet(){
+void Character::LeftAniSet() {
 	switch (hand)
 	{
 	case 0:
 	case 1:
-		if (bring)
-			FireAnimLeft();
-		else
-			RunAnimLeft();
+
+		RunAnimLeft();
 		break;
 	case 3:
 		StrawAnimLeft();
@@ -472,13 +465,24 @@ void Character::LeftAniSet(){
 	}
 
 }
-void Character::AniReset(){
-	if (!oneTime){
+void Character::AniReset() {
+	if (!oneTime) {
 		if (watchingView == 1)
 			RightAniSet();
 		else
 			LeftAniSet();
 		oneTime = true;
+	}
+}
+
+void Character::Jump() {
+	if (InputMgr->keyState(32) == 4 && GroundCheck(&movement, stop)) {
+		starttime = TimeMgr->GetTime() + 0.5;
+		jumpcheck = true;
+
+	}
+	if (starttime >= TimeMgr->GetTime() && jumpcheck == true) {
+		m_pCharacter->SetPosition(m_pCharacter->GetPosition().x, m_pCharacter->GetPosition().y - 20);
 	}
 }
 //027300947

@@ -1,6 +1,7 @@
 #include "Fire.h"
 #include <stdio.h>
 #include <iostream>
+#include "Light.h"
 Fire::Fire()
 {
 	perfectFire = false;
@@ -13,7 +14,7 @@ Fire::Fire()
 	m_pAnima = new Animation();
 	m_pAnima->Create(3, 15);
 	m_pAnima->GenerateAnimation("resource/item/fire/fire_base/animation");
-	m_pAnima->SetScale(D3DXVECTOR2(1,1));
+	m_pAnima->SetScale(D3DXVECTOR2(1, 1));
 }
 
 
@@ -29,42 +30,48 @@ void Fire::Update(float eTime){
 		if (time > 1){
 			time = 0;
 			times++;
+			timecheck++;
 		}
 	}
 	if (times >= 90){
 		fireSize = 0;
 		times = 0;
 	}
-	if (windstate.x == 1&& *playerView*windstate.y==-1){
+	if (timecheck % 10 == 0 && timecheck != 0) {
+		timecheck = 0;
+		DownGrade();
+	}
+	if (windstate.x == 1 && *playerView*windstate.y == -1){
 	}
 	if (charBool){
-		if (m_pChar->GetWatchingView() == 1)
-			m_pAnima->SetPosition(m_pChar->centerPoint.x + 10 - (50 * leftFire), m_pChar->centerPoint.y - 105);
-		else
-			m_pAnima->SetPosition(m_pChar->centerPoint.x - 40, m_pChar->centerPoint.y - 105);
+
+		m_pAnima->SetPosition(m_pChar->centerPoint.x - 10 - (50 * leftFire)*(fireSize + 0.5), m_pChar->centerPoint.y - (100 * (fireSize - 0.1)) - 70);
+
 
 	}
 	UpdateCollision();
-	
+
 }
 void Fire::Render(){
 	ISceneNode::Render();
 	m_pAnima->Render();
-	
+
 }
 
 void Fire::ResetFire(){
-	perfectFire=false;
+	perfectFire = false;
 	hang = false;
 
-	fireSize=1;
-	
-	time=0;
-	timer=1;
+	fireSize = 1;
+		
+	time = 0;
+	timer = 1;
 	times = 0;
 	*playerView = 0;
 
 	windstate = D3DXVECTOR2(0, 0);
+	m_pAnima->SetScale(D3DXVECTOR2(fireSize, fireSize));
+
 }
 void Fire::UpdateCollision(){
 	m_rColl.left = m_pAnima->GetPosition().x;
@@ -94,7 +101,7 @@ void Fire::BaseAni(){
 	upter = 1;
 }
 void Fire::NoneAni(){
-	m_pAnima->Create(5, 5,false);
+	m_pAnima->Create(5, 5, false);
 	m_pAnima->GenerateAnimation("resource/item/fire/fire_none");
 }
 Fire* Fire::GetInstance() {

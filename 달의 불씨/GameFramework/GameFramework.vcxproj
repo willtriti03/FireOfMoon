@@ -118,6 +118,7 @@
     <ClCompile Include="Function.cpp" />
     <ClCompile Include="Gagebar.cpp" />
     <ClCompile Include="GUIButton.cpp" />
+    <ClCompile Include="Hyena.cpp" />
     <ClCompile Include="ImageF.cpp" />
     <ClCompile Include="ImageT.cpp" />
     <ClCompile Include="InputManager.cpp" />
@@ -130,10 +131,13 @@
     <ClCompile Include="MouseCusor.cpp" />
     <ClCompile Include="NextStageManager.cpp" />
     <ClCompile Include="Npc.cpp" />
+    <ClCompile Include="Ocean.cpp" />
     <ClCompile Include="Philla.cpp" />
     <ClCompile Include="Physical.cpp" />
+    <ClCompile Include="Pole.cpp" />
     <ClCompile Include="PopUp.cpp" />
     <ClCompile Include="PrintFont.cpp" />
+    <ClCompile Include="Pulley.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="ShakeScene.cpp" />
     <ClCompile Include="SpawnManager.cpp" />
@@ -147,6 +151,7 @@
     <ClCompile Include="Touch.cpp" />
     <ClCompile Include="Wheel.cpp" />
     <ClCompile Include="Wind.cpp" />
+    <ClCompile Include="ZeepLine.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h" />
@@ -174,6 +179,7 @@
     <ClInclude Include="Function.h" />
     <ClInclude Include="Gagebar.h" />
     <ClInclude Include="GUIButton.h" />
+    <ClInclude Include="Hyena.h" />
     <ClInclude Include="ImageF.h" />
     <ClInclude Include="ImageT.h" />
     <ClInclude Include="InputManager.h" />
@@ -185,10 +191,13 @@
     <ClInclude Include="MouseCusor.h" />
     <ClInclude Include="NextStageManager.h" />
     <ClInclude Include="Npc.h" />
+    <ClInclude Include="Ocean.h" />
     <ClInclude Include="Philla.h" />
     <ClInclude Include="Physical.h" />
+    <ClInclude Include="Pole.h" />
     <ClInclude Include="PopUp.h" />
     <ClInclude Include="PrintFont.h" />
+    <ClInclude Include="Pulley.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="ShakeScene.h" />
     <ClInclude Include="SpawnManager.h" />
@@ -202,6 +211,7 @@
     <ClInclude Include="Touch.h" />
     <ClInclude Include="Wheel.h" />
     <ClInclude Include="Wind.h" />
+    <ClInclude Include="ZeepLine.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="resource\mapdata\mapChar\eight.mdatC" />
@@ -231,6 +241,7 @@
     <None Include="resource\mapdata\mapFire\seven.mdatFi" />
     <None Include="resource\mapdata\mapFire\six.mdatFi" />
     <None Include="resource\mapdata\mapFire\third.mdatFi" />
+    <None Include="resource\mapdata\mapHyena\first.mdatH" />
     <None Include="resource\mapdata\mapLine\eight.mdatL" />
     <None Include="resource\mapdata\mapLine\first.mdatL" />
     <None Include="resource\mapdata\mapLine\five.mdatL" />
@@ -249,6 +260,7 @@
     <None Include="resource\mapdata\mapNpc\seven.mdatN" />
     <None Include="resource\mapdata\mapNpc\six.mdatN" />
     <None Include="resource\mapdata\mapNpc\third.mdatN" />
+    <None Include="resource\mapdata\mapOcean\first.mdatO" />
     <None Include="resource\mapdata\mapPhilla\eight.mdatP" />
     <None Include="resource\mapdata\mapPhilla\first.mdatP" />
     <None Include="resource\mapdata\mapPhilla\five.mdatP" />

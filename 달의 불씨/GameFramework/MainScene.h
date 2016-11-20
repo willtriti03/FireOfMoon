@@ -23,7 +23,11 @@
 #include "Application.h"
 #include "CrashManager.h"
 #include "SpawnManager.h"
+#include "Hyena.h"
+#include "Pulley.h"
 #include "CSound.h"
+#include "Pole.h"
+#include "ZeepLine.h"
 
 class PopUp;
 class DirectionI;
@@ -53,6 +57,10 @@ private:
 	Stick			*m_pStick;
 	Fan				*m_pFan;
 	Npc				*m_pNpc;
+	Hyena			*m_pHyena;
+	Pulley			*m_pPulley;
+	Pole			*m_pPole;
+	ZeepLine		*m_pZeepLine;
 	PopUp			*m_pPopUp;
 
 	Sprite			*m_pStarMap;

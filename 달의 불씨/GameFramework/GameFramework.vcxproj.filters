@@ -106,9 +106,6 @@
     <Filter Include="Game\Object\Stick">
       <UniqueIdentifier>{e9df8973-20a1-4fb0-92dd-71de97ab57d7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Game\Object\Touch">
-      <UniqueIdentifier>{b6167cde-65eb-4ea2-a2ba-48b3486b154e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Game\Object\Fan">
       <UniqueIdentifier>{46c99685-e318-450d-a62c-56ccd9ae8139}</UniqueIdentifier>
     </Filter>
@@ -201,6 +198,24 @@
     </Filter>
     <Filter Include="Scene\Direction\DirectionI">
       <UniqueIdentifier>{5a5eaab2-5c21-49e5-aef3-dbf00673310c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Object\Pulley">
+      <UniqueIdentifier>{5a47a736-1a21-4827-b5dc-a00b891c6edb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Object\Hyena">
+      <UniqueIdentifier>{bacea803-3c96-4a1e-8517-0cef6f772911}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Object\ZeepLine">
+      <UniqueIdentifier>{3a4a6fca-fbee-4687-b755-2a3955662ea9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Ocean">
+      <UniqueIdentifier>{d647737f-db8e-4aed-a85e-a5bd86d4142f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Object\Pole">
+      <UniqueIdentifier>{325caaab-b97c-4a9f-a468-fe7f9653b1bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Object\Touch">
+      <UniqueIdentifier>{b6167cde-65eb-4ea2-a2ba-48b3486b154e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -363,6 +378,21 @@
     <ClCompile Include="ImageT.cpp">
       <Filter>Scene\Direction\DirectionG</Filter>
     </ClCompile>
+    <ClCompile Include="Pulley.cpp">
+      <Filter>Game\Object\Pulley</Filter>
+    </ClCompile>
+    <ClCompile Include="Hyena.cpp">
+      <Filter>Game\Object\Hyena</Filter>
+    </ClCompile>
+    <ClCompile Include="ZeepLine.cpp">
+      <Filter>Game\Object\ZeepLine</Filter>
+    </ClCompile>
+    <ClCompile Include="Ocean.cpp">
+      <Filter>Game\Ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="Pole.cpp">
+      <Filter>Game\Object\Pole</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h">
@@ -523,6 +553,21 @@
     </ClInclude>
     <ClInclude Include="ImageT.h">
       <Filter>Scene\Direction\DirectionG</Filter>
+    </ClInclude>
+    <ClInclude Include="Pulley.h">
+      <Filter>Game\Object\Pulley</Filter>
+    </ClInclude>
+    <ClInclude Include="Hyena.h">
+      <Filter>Game\Object\Hyena</Filter>
+    </ClInclude>
+    <ClInclude Include="ZeepLine.h">
+      <Filter>Game\Object\ZeepLine</Filter>
+    </ClInclude>
+    <ClInclude Include="Ocean.h">
+      <Filter>Game\Ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="Pole.h">
+      <Filter>Game\Object\Pole</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -768,6 +813,12 @@
     </None>
     <None Include="resource\mapdata\mapNpc\six.mdatN">
       <Filter>Game\DataFile\6.six</Filter>
+    </None>
+    <None Include="resource\mapdata\mapHyena\first.mdatH">
+      <Filter>Game\DataFile\1.First</Filter>
+    </None>
+    <None Include="resource\mapdata\mapOcean\first.mdatO">
+      <Filter>Game\DataFile\1.First</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

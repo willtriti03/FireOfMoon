@@ -62,7 +62,8 @@ bool Physical::Crush(Physical *phy1){
 			for (int j = -1; j <= 1; j += 2){
 				int y = phy1->EllipseX(i, j);
 				int x = phy1->EllipseY(y - phy1->centerPoint.y, j);
-				if ((phy2Rect.left <= m_rColl.left&&m_rColl.left <= phy2Rect.right) || (phy2Rect.left <= m_rColl.right&&m_rColl.right <= phy2Rect.right)){
+				if ((phy2Rect.left <= m_rColl.left&&m_rColl.left <= phy2Rect.right) || (phy2Rect.left <= m_rColl.right&&m_rColl.right <= phy2Rect.right) ||
+					(m_rColl.left <= phy2Rect.left&&phy2Rect.left <= m_rColl.right) || (m_rColl.left <= phy2Rect.right&&phy2Rect.right <= m_rColl.right)){
 					if (EllipseRX(x, -1) <= y&&y <= EllipseRX(x, 1)){
 						return true;
 					}
@@ -149,6 +150,7 @@ void Physical::SetTemCollison(){
 	for (int i = -1 * lowRadian; i <= lowRadian; i += PIXCEL){
 		elliPoint[cnt++] = D3DXVECTOR2(EllipseX(i, -1),EllipseX(i, 1));
 	}*/
+	
 }
 
 //x©÷ / a©÷ + y©÷ / b©÷ = 1
